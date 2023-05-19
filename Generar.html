@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generar Usuario y Contraseña</title>
+  <style>
+    body {
+      background-color: blue;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      width: 300px;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    input[type="submit"] {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h2>Generar Usuario y Contraseña</h2>
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required><br>
+    <input type="submit" value="Generar">
+  </form>
+
+  <script>
+    document.querySelector("form").addEventListener("submit", function(event) {
+      event.preventDefault(); // Evitar envío del formulario
+
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Aquí puedes realizar las acciones necesarias con el usuario y la contraseña generados
+      console.log("Usuario generado: " + username);
+      console.log("Contraseña generada: " + password);
+
+      // Redirigir a la página principal después de generar los datos
+      window.location.href = "iniciar.html";
+    });
+  </script>
+</body>
+</html>
